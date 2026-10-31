@@ -10,7 +10,7 @@ print("From 2015",len(df))
 df = df[df["basisOfRecord"] == "HUMAN_OBSERVATION"]
 print('Sighitings only: ', len(df))
 
-df = df[df["decimalLatitude"].between(20.5,26.7) & df["decimalLongitude"].between(88.0,90.8)]
+df = df[df["decimalLatitude"].between(20.5,26.7) & df["decimalLongitude"].between(88.0,92.8)]
 print("Inside the Bangladesh Bound Box: ", len(df))
 
 for cell_km in [1,5,10]:
@@ -27,5 +27,5 @@ gy = np.floor(df["decimalLatitude"]/cell)
 thinned = df.groupby([gx,gy]).head(1)
 thinned.to_csv("data/thinned_oriole.csv",index=False)
 print()
-pirnt("Saved thinnned Oriole",len(thinned))
+print("Saved thinnned Oriole",len(thinned))
 
