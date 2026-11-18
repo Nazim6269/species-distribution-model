@@ -23,7 +23,7 @@ bg= bg.groupby([gx,gy]).head(1).copy()
 
 
 # 3. Extract the same climate variables
-coords = list(zip(bg["decimalLatitude"],bg["decimalLongitude"]))
+coords = list(zip(bg["decimalLongitude"],bg["decimalLatitude"]))
 for v in KEEP_VARS:
     number = v.replace("bio","")
     f = glob.glob(f"data/worldclim/*bio_{number}.tif")[0]
