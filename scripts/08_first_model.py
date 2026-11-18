@@ -32,7 +32,7 @@ models = {
 
 for name,model in models.items():
     model.fit(X_tr,y_tr)
-    auc = roc_auc_score(y_te,model.predict.proba(X_te)[:,1])
+    auc = roc_auc_score(y_te,model.predict_proba(X_te)[:,1])
     print(name, "test AUC",round(auc,3))
 
 
