@@ -27,7 +27,7 @@ models = {
        StandardScaler(),
         LogisticRegression(class_weight="balanced",max_iter=1000)
     ),
-    "Random Forest":RandomForestClassifier(n_estimators=300,min_samples_leaf=5,class_weight="balanced",random_state="42")
+    "Random forest":RandomForestClassifier(n_estimators=300,min_samples_leaf=5,class_weight="balanced",random_state=42)
 }
 
 for name,model in models.items():
